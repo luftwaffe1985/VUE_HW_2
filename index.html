@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VUE_JS_HW_2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script defer src="data.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Products_list</p>
+      <ul class="content">
+        <li v-for="product in products" :key="product.id">
+          product: {{product.title}} - price: {{product.price}}
+        </li>
+      </ul>
+      <br /><br />
+      <button @click="sortInAscendingOrder" class="btn">Increase</button
+      ><br /><br />
+      <button @click="sortInDescendingOrder" class="btn">Decrease</button>
+    </div>
+  </body>
+</html>
